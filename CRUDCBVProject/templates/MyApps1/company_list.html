@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>company_list.html</title>
+    {% extends 'MyApps1/base.html' %}
+</head>
+<body>
+{%block body_block%}
+    <h1>List of All-Companies</h1><hr>
+    <ol>
+         {%for company in company_list%}
+         <h2>
+             <li>
+                    <a href="/detail/{{company.id}}">{{company.name|upper}}</a>
+             </li>
+         </h2>
+         {%endfor%}
+    </ol>
+{%endblock %}
+</body>
+</html>

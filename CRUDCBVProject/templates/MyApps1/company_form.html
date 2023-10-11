@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>company_from.html</title>
+    {% extends 'MyApps1/base.html' %}
+</head>
+<body>
+    {% block body_block %}
+        <h1>Companny create(insert) Form</h1>
+        <hr/>
+        <form method="post">
+            {{ form.as_p }}
+            {% csrf_token %}
+        <input type="submit" value="insert-Record"/>
+        </form>
+    {% endblock %}
+</body>
+</html>
